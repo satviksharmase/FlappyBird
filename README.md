@@ -12,8 +12,8 @@ Ensure you have Python and Pygame installed on your machine. You can install Pyg
 **Running the Game**
 _Clone the repository:_
 
-`git clone https://github.com/yourusername/flappy-bird-clone.git
-cd flappy-bird-clone`
+`git clone https://github.com/satviksharmase/FlappyBird.git`
+`cd flappy-bird-clone`
 
 _Run the game:_
 
