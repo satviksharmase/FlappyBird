@@ -8,12 +8,8 @@ pygame.init()
 clock = pygame.time.Clock()
 
 def load_image(filename):
-    # Get the path to the 'assets' directory in the extracted temporary directory
     assets_dir = os.path.join(sys._MEIPASS)
-    # Construct the full path to the image file
     image_path = os.path.join(assets_dir, filename)
-    print("Attempting to load:", image_path)  # Add this line for debugging
-    # Load and return the image
     return pygame.image.load(image_path).convert_alpha()
 
 # Window
