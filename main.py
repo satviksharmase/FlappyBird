@@ -1,9 +1,20 @@
 import pygame
 from sys import exit
 import random
+import os
+import sys
 
 pygame.init()
 clock = pygame.time.Clock()
+
+def load_image(filename):
+    # Get the path to the 'assets' directory in the extracted temporary directory
+    assets_dir = os.path.join(sys._MEIPASS)
+    # Construct the full path to the image file
+    image_path = os.path.join(assets_dir, filename)
+    print("Attempting to load:", image_path)  # Add this line for debugging
+    # Load and return the image
+    return pygame.image.load(image_path).convert_alpha()
 
 # Window
 win_height = 720
@@ -11,15 +22,15 @@ win_width = 551
 window = pygame.display.set_mode((win_width, win_height))
 
 # Images
-bird_images = [pygame.image.load("assets/bird_down.png"),
-               pygame.image.load("assets/bird_mid.png"),
-               pygame.image.load("assets/bird_up.png")]
-skyline_image = pygame.image.load("assets/background.png")
-ground_image = pygame.image.load("assets/ground.png")
-top_pipe_image = pygame.image.load("assets/pipe_top.png")
-bottom_pipe_image = pygame.image.load("assets/pipe_bottom.png")
-game_over_image = pygame.image.load("assets/game_over.png")
-start_image = pygame.image.load("assets/start.png")
+bird_images = [load_image("assets/bird_down.png"),
+               load_image("assets/bird_mid.png"),
+               load_image("assets/bird_up.png")]
+skyline_image = load_image("assets/background.png")
+ground_image = load_image("assets/ground.png")
+top_pipe_image = load_image("assets/pipe_top.png")
+bottom_pipe_image = load_image("assets/pipe_bottom.png")
+game_over_image = load_image("assets/game_over.png")
+start_image = load_image("assets/start.png")
 
 # Game
 scroll_speed = 1

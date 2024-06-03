@@ -1,0 +1,3 @@
+([('main',
+   '/Users/satviksharma/Desktop/FLAPPY/FlappyBird/dist/main',
+   'EXECUTABLE')],)
